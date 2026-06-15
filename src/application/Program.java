@@ -23,11 +23,8 @@ public class Program {
         y.b = sc.nextDouble();
         y.c = sc.nextDouble();
 
-        double pA = (x.a + x.b + x.c) / 2.0;
-        double areaX = Math.sqrt(pA * (pA - x.a) * (pA - x.b) * (pA - x.c));
-
-        double pB = (y.a + y.b + y.c) / 2.0;
-        double areaY = Math.sqrt(pB * (pB - y.a) * (pB - x.b) * (pB - x.c));
+        double areaX = x.area();
+        double areaY = y.area();
 
         System.out.print("Area of triangle X: " + String.format("%.4f%n", areaX));
         System.out.print("Area of triangle Y: " + String.format("%.4f%n", areaY));
