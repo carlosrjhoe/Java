@@ -1,28 +1,33 @@
 package application;
 import java.util.Locale;
 import java.util.Scanner;
+import entities.Triangle;
+
 
 public class Program {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        double xA, xB, xC, yA, yB, yC;
+
+        Triangle x, y;
+        x = new Triangle();
+        y = new Triangle();
 
         System.out.println("Enter the measures of triangle X: ");
-        xA = sc.nextDouble();
-        xB = sc.nextDouble();
-        xC = sc.nextDouble();
+        x.a = sc.nextDouble();
+        x.b = sc.nextDouble();
+        x.c = sc.nextDouble();
 
         System.out.println("Enter the measures of triangle Y: ");
-        yA = sc.nextDouble();
-        yB = sc.nextDouble();
-        yC = sc.nextDouble();
+        y.a = sc.nextDouble();
+        y.b = sc.nextDouble();
+        y.c = sc.nextDouble();
 
-        double pA = (xA + xB + xC) / 2.0;
-        double areaX = Math.sqrt(pA * (pA - xA) * (pA - xB) * (pA - xC));
+        double pA = (x.a + x.b + x.c) / 2.0;
+        double areaX = Math.sqrt(pA * (pA - x.a) * (pA - x.b) * (pA - x.c));
 
-        double pB = (yA + yB + yC) / 2.0;
-        double areaY = Math.sqrt(pB * (pB - yA) * (pB - xB) * (pB - xC));
+        double pB = (y.a + y.b + y.c) / 2.0;
+        double areaY = Math.sqrt(pB * (pB - y.a) * (pB - x.b) * (pB - x.c));
 
         System.out.print("Area of triangle X: " + String.format("%.4f%n", areaX));
         System.out.print("Area of triangle Y: " + String.format("%.4f%n", areaY));
