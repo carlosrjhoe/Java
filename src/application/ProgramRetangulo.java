@@ -9,11 +9,11 @@ public class ProgramRetangulo {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Digite a largura e a altura do retângulo: ");
-        double largura = sc.nextDouble();
-        double altura = sc.nextDouble();
+        Retangulo obj = new Retangulo();
 
-        Retangulo obj = new Retangulo(largura, altura);
+        System.out.println("Digite a largura e a altura do retângulo: ");
+        obj.largura = sc.nextDouble();
+        obj.altura = sc.nextDouble();
 
         System.out.println("AREA = " + String.format("%.2f", obj.calcularArea()));
         System.out.println("PERÍMETRO = " + String.format("%.2f", obj.calcularPerimetro()));
