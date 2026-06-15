@@ -39,4 +39,8 @@ public class SintaxeFuncao {
     public static void showResult(int value) {
         System.out.println("O maior é: " + value);
     }
+
+    public static void showResult2(int value) {
+        System.out.println("O maior é: " + value);
+    }
 }
