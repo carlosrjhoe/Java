@@ -16,9 +16,8 @@ public class ProgramPessoa {
 
         double idadeMedia = (objPessoa1.idade + objPessoa2.idade) / 2;
 
-        System.out.println(String.format("A idade média de %s e %s é de %.2f",
-                objPessoa1.nome, objPessoa2.nome, idadeMedia)
-        );
+        System.out.printf("A idade média de %s e %s é de %.2f%n",
+                objPessoa1.nome, objPessoa2.nome, idadeMedia);
 
         sc.close();
     }
