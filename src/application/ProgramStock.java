@@ -9,18 +9,22 @@ public class ProgramStock {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        Product product = new Product();
 
         System.out.println("Enter product data: ");
         System.out.print("Name: " );
-        product.name = sc.nextLine();
+        String name = sc.nextLine();
         System.out.print("Price of product: ");
-        product.price = sc.nextDouble();
-        System.out.print("Quantity: ");
-        product.quantity = sc.nextInt();
+        double price = sc.nextDouble();
+        Product product = new Product(name, price);
+
+        System.out.println(product.getName());
+        product.setName("Notebook");
+        System.out.println(product.getName());
 
         System.out.println();
         System.out.print("Product data: " + product);
+        System.out.println(product.getName());
+        System.out.println(product.getQuantity());
 
         System.out.println();
         System.out.print("Enter the number of products to be added in stock: ");
